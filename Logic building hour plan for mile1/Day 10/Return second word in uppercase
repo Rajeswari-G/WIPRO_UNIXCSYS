@@ -1,0 +1,29 @@
+char *second_word_uppercase(char* str)
+{
+  int n,i=0,j=0;
+  char *temp=(char*)malloc(sizeof(str)+1);
+  n=strlen(str);
+  while(i<n && str[i]!=' ')
+  {
+    ++i;
+  }
+  if(i==n)
+  {
+    printf("LESS");
+  }
+  ++i;
+  while(i<n && str[i]!=' ')
+  {
+    if(str[i]>='a' && str[i]<='z')
+    temp[j]=str[i]-32;
+    else
+    temp[j]=str[i];
+    i++;
+    j++;
+   }
+   temp[j]='\0';
+   return temp;
+ }
+ 
+   
+  
