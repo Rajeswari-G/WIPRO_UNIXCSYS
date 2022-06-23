@@ -1,0 +1,32 @@
+int totalHillWeight(int input1, int input2,int input3)
+{
+int b,i,sum=0,j=0,a[100];
+for(i=1;i<=input1;i++)
+{
+   if(i==1)
+   sum=input2;
+   else
+   {
+     if(i==2)
+     {
+       a[0]=input2+input3;
+       for(b=1;b<=i;b++)
+       {
+         sum=sum+a[0];
+       }
+       j++;
+     }
+     else
+     {
+       a[j]=a[j-1]+input3;
+       for(b=1;b<=i;b++)
+       {
+         sum=sum+(a[j-1]+input3);
+       }
+       j++;
+      }
+   }
+ }
+return sum;
+}
+       
