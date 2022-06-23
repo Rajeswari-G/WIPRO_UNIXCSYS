@@ -1,0 +1,78 @@
+#include <stdio.h>
+
+int main()
+{
+    int input1,input2,input3;
+    int a[10],u[3];
+    int i=0,rem,j,b,pin,k;
+    int f,g,h,z=0;
+    printf("Enter the inputs:");
+    scanf("%d",&input1);
+    printf("Inout2:");
+    scanf("%d",&input2);
+    printf("Input3:");
+    scanf("%d",&input3);
+    while(input1>0)
+    {
+        rem=input1%10;
+        a[i]=rem;
+        input1=input1/10;
+        i++;
+    }
+    while(input2>0)
+    {
+        rem=input2%10;
+        a[i]=rem;
+        input2=input2/10;
+        i++;
+    }
+    while(input3>0)
+    {
+        rem=input3%10;
+        a[i]=rem;
+        input3=input3/10;
+        i++;
+    }
+     for(f=0,g=3,h=6;f<3,g<6,h<9;f++,g++,h++)
+    {
+        if(a[f]<a[g] && a[f]<a[h])
+        u[z] =a[f];
+        else if(a[g]<a[f] && a[g]<a[h])
+        u[z]=a[g];
+        else
+        u[z]=a[h];
+        z++;
+    }
+    for(j=0;j<9;j++)
+    {
+      for(k=j+1; k<9;k++)
+      {
+        if(a[j]<a[k])
+        {
+            b=a[j];
+            a[j]=a[k];
+            a[k]=b;
+        }
+      }
+    }
+    pin=1000*a[0]+100*u[2]+10*u[1]+u[0];
+
+    printf("Pin=%d",pin);
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
